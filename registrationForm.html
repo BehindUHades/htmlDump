@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+        body{
+            background-color: rgb(155, 217, 238);
+            font-family: Arial;
+        }
+        form{
+            background-color: rgb(240, 240, 240);
+            border-radius: 5px;
+            padding: 20px;
+            width: 70%;
+            margin:auto;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus{
+            outline-color: rgb(32, 182, 232);
+            outline-width: 3px;
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=password],
+        input[type=date],
+        input[type=number],
+        select, 
+        textarea,
+        input[type=submit] {
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 4px;
+            border: 1px;
+            box-sizing: border-box;
+            display: inline-block;
+        }
+        input[type=file]{
+            margin: 4px;
+        }
+        input[type=radio],
+        input[type=checkbox]{
+            margin: 10px 0;
+        }
+        input[type=submit]{
+            background-color: rgb(100, 255, 100);
+            padding: 14px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor:pointer;
+        }
+        input[type=submit]:hover{
+            background-color: rgb(41, 149, 41);
+
+        }
+        label{
+            font-weight: bold;
+        }
+
+        td, th{
+            border: rgba(255, 255, 255, 0.571) 1px outset;
+        }
+        table{
+            background-color: rgb(240, 240, 240);
+            border-collapse: separate;
+            border-radius: 4px;
+            border: rgba(255, 255, 255, 0.571) 1px outset;
+            font-size: 14px;
+            text-align: center;
+            margin:20px auto;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+
+        }
+        caption{
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center;">Registration Form</h1>
+    </header>
+    <main>
+        <form name="registration" method="post">
+            <label for="firstName">First Name: </label>
+            <input type="text" name="firstName" id="firstName" placeholder="Enter your First Name" required>
+
+            <label for="lastName">Last Name: </label>
+            <input type="text" name="lastName" id="lastName" placeholder="Enter your Last Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email" required>
+
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password" placeholder="Enter your Password" required>
+
+            <label for="profilePicture">Profile Picture:</label> <br>
+            <input type="file" name="profilePicture" id="profilePicture"> <br>
+
+            <label for="gender">Gender: </label>
+            <input type="radio" name="gender" id="male" required> <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" required> <label for="female">Female</label>
+            <input type="radio" name="gender" id="otherGender" required> <label for="otherGender">Other</label> <br>
+
+            <label for="birthday">Date of Birth: </label>
+            <input type="date" name="birthday" id="birthday" required>
+
+            <label for="phoneNumber">Phone Number: </label>
+            <input type="number" name="phoneNumber" id="phoneNumber" placeholder="+63-xxx-xxx-xxxx" required>
+
+            <label for="country">Country:</label>
+            <select name="country" id="country">
+                <option value="null"></option>
+                <option value="usa">United States of America</option>
+                <option value="philippines">Philippines</option>
+                <option value="uk">United Kingdom</option>
+            </select>
+
+            <input type="checkbox" name="terms" id="terms" required>
+            <label for="terms">I agree to the terms and conditions</label> <br>
+
+            <input type="checkbox" name="subscribe" id="subscribe">
+            <label for="subscribe">Subscribe to our Newsletter</label> <br>
+
+            <label for="bio">Bio:</label> <br>
+            <textarea name="bio" id="bio" placeholder="Tell us about yourself"></textarea>
+
+            <input type="submit" value="Register">
+        </form>
+
+        <table width="90%" cellspacing="0" cellpadding="5">
+            <caption>Registered Users</caption>
+            <thead>
+                <tr>
+                    <th rowspan="2">Name</th>
+                    <th colspan="2">Contact Information</th>
+                    <th rowspan="2">Gender</th>
+                    <th rowspan="2">Country</th>
+                    <th rowspan="2">Profile Picture</th>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td rowspan="2">Gabriel Montano</td>
+                    <td>gab@ust.com</td>
+                    <td>123-456-7890</td>
+                    <td rowspan="2">Male</td>
+                    <td rowspan="2">United States</td>
+                    <td rowspan="2"> Uploaded</td>
+                </tr>
+                <tr>
+                    <td>gab.montano@gmail.com</td>
+                    <td>098-765-4321</td>
+                </tr>
+                <tr>
+                    <td>Markus Basty Concepcion</td>
+                    <td>markusbasty.concepcion.cics@ust.edu.ph</td>
+                    <td>976-111-3557</td>
+                    <td>Male</td>
+                    <td>Philippines</td>
+                    <td>Uploaded</td>
+                </tr>
+                <tr>
+                    <td>Karl Armand Dela Torre</td>
+                    <td>karlarmand.delatorre.cics@ust.edu.ph</td>
+                    <td>923-313-6531</td>
+                    <td>Male</td>
+                    <td>Philippines</td>
+                    <td>Uploaded</td>
+                </tr>
+                <tr>
+                    <td>Julian Areeson Estupa</td>
+                    <td>julianareeson.estupa.cics@ust.edu.ph</td>
+                    <td>123-345-3327</td>
+                    <td>Male</td>
+                    <td>Philippines</td>
+                    <td>Uploaded</td>
+                </tr>
+                <tr>
+                    <td>Matthew Franz Figueroa</td>
+                    <td>matthewfranz.figueroa.cics@ust.edu.ph</td>
+                    <td>911-420-1933</td>
+                    <td>Male</td>
+                    <td>Philippines</td>
+                    <td>Uploaded</td>
+                </tr>
+                <tr>
+                    <td>Jonas Emmanuel Galiza</td>
+                    <td>jonasemmanuel.galiza.cics@ust.edu.ph</td>
+                    <td>911-690-2001</td>
+                    <td>Male</td>
+                    <td>Philippines</td>
+                    <td>Uploaded</td>
+                </tr>
+                <tr>
+                    <td>Roland Machiavelli Roa</td>
+                    <td>rolandmachiavelli.roa.cics@ust.edu.ph</td>
+                    <td>901-323-8573</td>
+                    <td>Male</td>
+                    <td>Philippines</td>
+                    <td>Uploaded</td>
+                </tr>
+                <tr>
+                    <td>Thomas Delonge</td>
+                    <td>thomas.delonge.cics@ust.edu.ph</td>
+                    <td>901-182-1690</td>
+                    <td>Male</td>
+                    <td>United States</td>
+                    <td>Uploaded</td>
+                </tr>
+                <tr>
+                    <td>Mark Hoppus</td>
+                    <td>mark.hoppus.cics@ust.edu.ph</td>
+                    <td>901-300-8003</td>
+                    <td>Male</td>
+                    <td>Philippines</td>
+                    <td>Uploaded</td>
+                </tr>
+                <tr>
+                    <td>Matthew Healy</td>
+                    <td>matthew.healy.cics@ust.edu.ph</td>
+                    <td>923-123-8343</td>
+                    <td>Male</td>
+                    <td>United Kingdom</td>
+                    <td>Uploaded</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="6">Date: 09/05/2025</th>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+    <footer></footer>
+</body>
+</html>
